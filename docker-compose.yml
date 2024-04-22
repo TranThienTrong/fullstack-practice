@@ -14,7 +14,7 @@ services:
 
   fullstack-app:
     container_name: fullstack-app
-    image: trongkami/fullstack-app
+    image: trongkami/fullstack-app:latest
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/customer
     ports:
