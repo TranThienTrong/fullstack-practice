@@ -22,7 +22,7 @@ jobs:
         # Provide the image credential
         env:
           POSTGRES_USER: amigoscode
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_PASSWORD: password
           POSTGRES_DB: customer
         ports:
           # Maps tcp port 5432 on service container to the host
