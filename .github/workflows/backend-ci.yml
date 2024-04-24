@@ -3,7 +3,7 @@ name: CI - build Backend
 on:
   pull_request:
     branches:
-      - main
+      - master
     paths:
       - backend/**
 
@@ -47,5 +47,5 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'maven'
-        # Run Unit/Integration Tests with Maven
+      - name: Run Unit/Integration Tests with Maven
         run: mvn -ntp -B verify
