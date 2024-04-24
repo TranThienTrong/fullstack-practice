@@ -13,9 +13,6 @@ jobs:
   build:
     # Containers must run in Linux based operating systems
     runs-on: ubuntu-latest
-    default:
-      run:
-        working-directory: ./backend
     # Service containers to run with `build`
     services:
       # Label used to access the service container
@@ -37,7 +34,9 @@ jobs:
           --health-timeout 5s
           --health-retries 5
 
-
+    defaults:
+      run:
+        working-directory: ./backend
     steps:
       # Downloads a copy of the code in your repository before running CI tests
       - name: Check out repository code
